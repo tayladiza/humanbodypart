@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,65 +8,48 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   
-  <body style="background-color: black">    
-    <div id='wrap'>
-      <article id='content'></article>
-      <header id='playbar'>
-        <audio id="audioPlayer" src="playbar/playlist/your-audio.mp3"></audio>
-        <div id='playbarbuttons'>
-          <button id='prev'>
-            <i class='material-icons'>skip_previous</i>
-          </button>
-          <button id='play'>
-            <i class='material-icons'>play_arrow</i>
-          </button>
-          <button id='next'>
-            <i class='material-icons'>skip_next</i>
-          </button>
-        </div>
-        <div id='track'>
-          <div class='track'>
-            <div class='knob'></div>
-          </div>
-        </div>
-      </header>
-    </div>
-    
-    <div class="header">
-      <header class="header">    
-      <!-- <img src="humanbodypart.png" alt="logo" />      -->
-      <h1>humanbodypartlogoimagineit</h1>
-      </header>
-    </div>
-    
+  <body style="background-image: url(../assets/picture.png); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"> 
+
     <div class="columndiv">
       <div class="column1">
-        <!-- <img src="us.jpg" alt="me and my boyfriend"> -->
-        <button type="button" class="column1-button" onclick="alert('im not ready yet!')">HOME</button>
-        <button type="button" class="column1-button" onclick="alert('im not ready yet!')">THOUGHTS</button>
-        <button type="button" class="column1-button" onclick="alert('im not ready yet!')">MEDIA</button>
-        <button type="button" class="column1-button" onclick="alert('im not ready yet!')">TTM</button>
+        <div class="column1window">
+          <a href="https://www.instagram.com/girlsd1e/" target="_blank" rel="noopener noreferrer">
+            <button type="button"><img src="../assets/orange.webp" /></button>
+          </a>
+          <a href="https://letterboxd.com/redmf/" target="_blank" rel="noopener noreferrer">
+            <button type="button"><img src="../assets/orange.webp" /></button>
+          </a>
+          <a href="https://www.last.fm/user/sometimesred" target="_blank" rel="noopener noreferrer">
+            <button type="button"><img src="../assets/orange.webp" /></button>
+          </a>
+          <a href="https://www.instagram.com/avgmediaconsumer/" target="_blank" rel="noopener noreferrer">
+            <button type="button"><img src="../assets/orange.webp" /></button>
+          </a>
+        </div>
+        
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6fdlRC89IOdL0dbP3tYQes?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>      
+      
       </div>
 
       <div class="column2">
-        <div id="intro">
-          <div id="words"> 
-            <h2>hey</h2>
-            <p>something something something interesting to say at all really</p>
-          </div>
-          <div id="currents">
-            <h2>currents</h2>
-            <ul>
-              <li>sum <a href="https://open.spotify.com/playlist/6fdlRC89IOdL0dbP3tYQes?si=eda59cf46a7a4ded">music</a> i been bumping</li>
-              <li>gummo like the movie. need to rewatch</li>
-              <li>i been on sum gis shit as of late lowkey. lmk about any gis analyst job postings post grad...</li>
-              <li>i have got to die bru</li>
-            </ul>
-          </div>
+        
+        <div class="header">
+          <header class="header">    
+          <img src="../assets/HEADER.webp" alt="logo" />
+          </header>
         </div>
-        <div>
-          <!-- <button type="button" onclick="alert('im not ready yet!')"><img src="us.jpg" /></button> -->
-          <button type="button" class="column2-button" onclick="alert('im not ready yet!')">imagine five or six of these jawns tho</button>
+        
+        <div class="me">
+          <img src="..assets/me.webp/" alt="cowboyBoots">
+        </div>
+
+        <div class="column2buttons">
+          <a href="https://www.instagram.com/avgmediaconsumer/" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="column2-button" onclick="alert('im not ready yet!')">imagine five or six of these jawns tho</button>
+          </a>
+          <a href="https://www.instagram.com/avgmediaconsumer/" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="column2-button" onclick="alert('im not ready yet!')">imagine five or six of these jawns tho</button>
+          </a>
         </div>
       </div>
 
