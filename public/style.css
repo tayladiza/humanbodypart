@@ -2,7 +2,6 @@
 #wrap {
   display: flex;
   flex-direction: column;
-  margin: -8px;
 }
 
 #content {
@@ -13,7 +12,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  color: black;
 }
 
 .columndiv{
@@ -21,8 +19,9 @@
   flex-direction: row;
   gap: 2rem;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .column1,
@@ -42,7 +41,6 @@
   gap: 1rem;
   max-width: 50vh;
   min-height: 80vh;
-  padding-top: 2rem;
 }
 .column1window {
   display: grid;
@@ -50,14 +48,21 @@
   grid-template-rows: 1fr 1fr;    /* 2 rows */
   gap: 1rem;
   aspect-ratio: 1 / 1; /* makes it a square grid */
-
 }
-.column1window img,
+.column1window img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .column1window button {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  border: 0rem;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+.column1window button:hover {
+  cursor: pointer;
 }
 .column2{
   color: white;
@@ -67,23 +72,6 @@
   gap: 10vh;
   min-height: 80vh;
 }
-.me{
-  justify-content: center;
-  max-height: 60vh;
-  max-width: 50vh;
-}
-
-.column3{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right:2rem;
-  max-width: 50vh;
-  min-height: 80vh;
-  gap: 1rem;
-  padding-top: 2rem;
-}
-
 .column2buttons{
   display: flex;
   flex-direction: row;
@@ -96,35 +84,103 @@
   height: 80px;
   left: 33%;
   border-radius: 50%;
-  &:hover {
-        cursor: pointer;
-        background: white;
-      }
+}
+.column2-button:hover {
+  cursor: pointer;
+  background: white;
+}
+.me{
+  position: relative;
+  transform-origin: 0 0;
+  /* justify-content: center; */
+  /* max-height: 60vh;
+  max-width: 50vh; */
+}
+#bigMe{
+  position: absolute;
+  transform: translateX(-20);
 }
 
-.column3-button {
-  width: 100%;
-  height: 25%;
-  padding: 0;
-  margin: 0;
-  border: none;
-  overflow: hidden;
+.column3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
+  padding: 5px 0;
+  gap: 12px;
+  background: #ee8709; 
+  opacity: 0.5;
+  background-blend-mode: overlay;
+  /* film holes */
+  -webkit-mask:
+    linear-gradient(#000 0 0) center/100% 100% no-repeat,
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 12px,
+      #000 12px,
+      #000 24px
+    ) left 10px top / 16px 100% no-repeat,
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 12px,
+      #000 12px,
+      #000 24px
+    ) right 10px top / 16px 100% no-repeat;
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.column3::before,
+.column3::after {
+  position: absolute;
+  top: 0;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  &:hover {
-    cursor: pointer;
-    background: white;
-  }
-}
 
-.column3-button img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  margin: 0;
-  padding: 0;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,0.8);
+
+  writing-mode: vertical-rl; /* vertical text */
+  text-orientation: mixed;
+}
+.column3::before {
+  content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0KODAK PORTRA 400\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0 22 \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0KODAK PORTRA 400\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0 23 \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0KODAK PORTRA 400\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0 24";
+  left: 0px;
+  transform: rotate(180deg);
+}
+.column3-button {
+  position: relative;
+  width: 80%;              /* inset from sprockets */
+  aspect-ratio: 2 / 3;
+  background-color: #ee8709;
+  opacity: 1;     /* darker orange frame area */
+  overflow: hidden;
   border: none;
-      }
+  outline: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.4s;
+}
+.column3-button:hover {
+  cursor: pointer;
+  background: white;
+}
+.column3-button img {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(90deg);
+  mix-blend-mode: multiply;
+  filter:
+    /* saturate(0) */
+    invert(1)
+    brightness(1.5)
+    contrast(1.3);
+}
