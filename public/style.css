@@ -65,7 +65,30 @@
 .column1window button:hover {
   cursor: pointer;
 }
-
+.column1button {
+  display: flex;
+  justify-content: center;         /* vertical center */
+  /* max-height: 60vh; */
+  /* max-width: 50vh; */
+  margin: 0 auto; 
+  object-fit: contain;
+  gap: 10vh;
+  align-items: center;
+}
+.column1button button {
+  object-fit: contain;
+  background: transparent;
+  border: none;
+}
+.column1button img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.column1button button:hover {
+  cursor: pointer;
+}
 
 .column2{
   color: black;
