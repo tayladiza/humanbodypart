@@ -95,9 +95,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 10vh;
   object-fit: contain;
-  align-items: center;
+  align-items: flex-start;
 }
 .column2buttons{
   display: flex;
@@ -129,6 +128,9 @@
   max-height: 100%;
   object-fit: contain;
   display: block;
+}
+.column2-text {
+  text-align: left !important;
 }
 
 .column3 {
